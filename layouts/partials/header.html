@@ -22,7 +22,9 @@
             <span class="subtitle">{{ . }}</span><br>
             
             {{ end }}
-            <a href="{{ .Site.BaseURL }}"<i class="fa fa-twitter fa-fw"></i>
+            <a
+                    href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title | default "My cool new blog" }}</a></h3>
+            {{ with .Site.Params.Subtitle }}
         </div>
 
         {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
