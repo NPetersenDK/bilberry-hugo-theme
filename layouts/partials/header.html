@@ -18,7 +18,7 @@
         <div class="titles">
             <h3 class="title"><a
                     href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title | default "My cool new blog" }}</a></h3>
-            {{ with .Site.Params.Subtitle }}
+            {{ with .Site.Params.Tagline }}
             <span class="subtitle">{{ . }}</span><br>
             {{ end }}
             <a href="{{ .Site.Params.twitter }}"><i class="fab fa-twitter"></i></a> | 
